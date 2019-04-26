@@ -8,9 +8,9 @@ namespace CarvedRock.Api.GraphQL
     {
         public CarvedRockQuery(ProductRepository productRepository)
         {
-            Field<ListGraphType<ProductType>>(
+            FieldAsync<ListGraphType<ProductType>>(
                 "products", 
-                resolve: context => productRepository.GetAll()
+                resolve: async context => await productRepository.GetAllAsync()
             );
         }
     }

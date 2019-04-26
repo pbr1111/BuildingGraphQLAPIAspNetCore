@@ -1,4 +1,4 @@
-﻿namespace CarvedRock.Api.Data
+﻿namespace CarvedRock.Api.Data.Entities
 {
     public enum ProductType
     {
