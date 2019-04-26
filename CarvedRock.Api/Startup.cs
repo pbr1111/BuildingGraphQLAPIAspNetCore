@@ -36,6 +36,7 @@ namespace CarvedRock.Api
 
             services.AddGraphQL(o => { o.ExposeExceptions = false; })
                 .AddGraphTypes(ServiceLifetime.Scoped)
+                .AddUserContextBuilder(httpContext => httpContext.User)
                 .AddDataLoader();
         }
 
